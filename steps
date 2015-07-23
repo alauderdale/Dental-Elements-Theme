@@ -1,0 +1,13 @@
+Backend changes required:
+
+- create primary menus - company & patients
+
+- add:
+
+[Menu class]
+type = text
+size = 80
+
+to social network links custom post options
+
+add instagram to social networks 

@@ -1,0 +1,33 @@
+.google-map{
+	width: 100%; 
+	overflow: hidden; 
+	height: 594px;
+	margin-top:-594px;
+	iframe{
+		margin-top:-150px;
+		pointer-events: none;
+	}
+}
+
+section.contact-form{
+  background:$primary-color url(../images/contact_form_bg.png) center center scroll no-repeat;
+  @include background-size(cover);
+}
+
+section.contact-map-container{
+	height:594px;
+	background:$primary-color;
+}
+
+
+.map-show{
+	.card,h1{
+		display:none;
+	}
+	.google-map{
+		iframe{
+			margin-top:0!important;
+			pointer-events: auto;
+		}
+	}
+}
