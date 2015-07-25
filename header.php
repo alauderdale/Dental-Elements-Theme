@@ -16,6 +16,9 @@
 
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 
+<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="<?php bloginfo('template_url'); ?>/images/apple-touch-icon.png">
+
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <script src="<?php bloginfo('template_url'); ?>/js/vendor/jquery-1.9.1.min.js" type="text/javascript"></script>
@@ -94,7 +97,6 @@
 							echo '<li><a target="'.$target.'" href="' . $sociallink . '"><i class="fa ' . $menuclass . ' "></i></a></li>';
 							}
 						endwhile;
-						
 						// Reset Post Data
 						wp_reset_postdata();
 					?>
@@ -141,3 +143,5 @@
         </div>
       </div>
     </nav>
+    <!-- end menu -->
+    <div class='main'>

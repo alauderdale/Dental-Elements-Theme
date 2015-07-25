@@ -6,8 +6,8 @@
  */
 ?>
 
-
-
+    </div>
+    <!-- end main content -->
     <footer class='global-footer'>
       <section>
         <div class='container'>
