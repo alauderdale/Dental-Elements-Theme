@@ -134,7 +134,7 @@ function boiler_scripts_styles() {
 	wp_enqueue_style( 'main-style', get_template_directory_uri() . '/css/main.css');
 
 	// wp_enqueue_script( 'jquery' , array(), '', true );
-	wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/vendor/jquery.js', '20120206', true );
+	// wp_enqueue_script( 'jquery', get_template_directory_uri() . '/js/vendor/jquery.js', '20120206', true );
 
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/vendor/modernizr-2.6.2.min.js', '20120206', true );
 
@@ -148,11 +148,12 @@ function boiler_scripts_styles() {
 
 	wp_enqueue_script( 'boiler-plugins', get_template_directory_uri() . '/js/plugins.js', array(), '20120206', true );
 
+	wp_enqueue_script( 'masinry', get_template_directory_uri() . '/js/vendor/masonry.js', '20120206', true );
+
 	wp_enqueue_script( 'boiler-main', get_template_directory_uri() . '/js/main.js', array(), '20120205', true );
 
 	// wp_enqueue_script( 'nav', get_template_directory_uri() . '/js/vendor/nav.js', '20120206', true );
 
-		wp_enqueue_script( 'masinry', get_template_directory_uri() . '/js/vendor/masonry.js', '20120206', true );
 
 
 }
@@ -182,3 +183,30 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/custom_post_types.php';
 
 add_filter( 'wpcf7_load_js', '__return_false' );
+
+
+
+
+
+
+// Handle the post_type parameter given in get_terms function
+function df_terms_clauses($clauses, $taxonomy, $args) {
+	if (!empty($args['post_type']))	{
+		global $wpdb;
+
+		$post_types = array();
+
+		foreach($args['post_type'] as $cpt)	{
+			$post_types[] = "'".$cpt."'";
+		}
+
+	    if(!empty($post_types))	{
+			$clauses['fields'] = 'DISTINCT '.str_replace('tt.*', 'tt.term_taxonomy_id, tt.term_id, tt.taxonomy, tt.description, tt.parent', $clauses['fields']).', COUNT(t.term_id) AS count';
+			$clauses['join'] .= ' INNER JOIN '.$wpdb->term_relationships.' AS r ON r.term_taxonomy_id = tt.term_taxonomy_id INNER JOIN '.$wpdb->posts.' AS p ON p.ID = r.object_id';
+			$clauses['where'] .= ' AND p.post_type IN ('.implode(',', $post_types).')';
+			$clauses['orderby'] = 'GROUP BY t.term_id '.$clauses['orderby'];
+		}
+    }
+    return $clauses;
+}
+add_filter('terms_clauses', 'df_terms_clauses', 10, 3);

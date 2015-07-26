@@ -12,12 +12,26 @@
 
 get_header(); ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+<?php get_template_part( 'content', 'page_header' ); ?>
+
+<?php while ( have_posts() ) : the_post(); ?>
 
 
-	<?php endwhile; // end of the loop. ?>
+
+	<section>
+	  <div class='container'>
+		  <div class="row">
+		    <div class='col-lg-12'>
+		      <?php the_content();?>
+		    </div>
+		  </div>
+	  </div>
+	</section>
+
+
+<?php endwhile; // end of the loop. ?>
 	
-<!-- 	<?php get_template_part( 'content', 'sign_up' ); ?> -->
+<?php get_template_part( 'content', 'appt_banner' ); ?>
 
 
 <?php get_footer(); ?>
