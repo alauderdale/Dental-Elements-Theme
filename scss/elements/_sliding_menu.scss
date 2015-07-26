@@ -135,7 +135,7 @@ nav.sliding-menu {
             font-size:.8em;
             padding-left:0px;
             letter-spacing:1px;
-            &.active{
+            &.active, &.current-menu-item{
                 a{
                     color:$primary-color;
                     border-left:3px solid $primary-color;

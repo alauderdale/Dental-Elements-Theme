@@ -60,7 +60,7 @@
 	    Make an Appointment
 	  </a>
 	  <ul class='nav main-links'>
-	    <li class='active'>
+	    <li>
 	      <a href='<?php bloginfo('url')?>'>
 	        Home
 	      </a>
