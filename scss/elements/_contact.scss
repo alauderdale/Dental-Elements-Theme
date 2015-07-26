@@ -31,3 +31,28 @@ section.contact-map-container{
 		}
 	}
 }
+
+/*contact 7*/
+
+
+span.wpcf7-not-valid-tip{
+	font-size: 0.8em;
+	top: -6px;
+    position: relative;
+}
+
+div.wpcf7-validation-errors{
+	display:inline-block;
+	@extend .alert;
+	@extend .alert-warning;
+	font-size: 0.8em;
+	width: 97%;
+}
+
+div.wpcf7-mail-sent-ok{
+	display:inline-block;
+	@extend .alert;
+	@extend .alert-success;
+	font-size: 0.8em;
+	width: 97%;
+}
