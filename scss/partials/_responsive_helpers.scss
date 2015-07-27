@@ -41,14 +41,21 @@
 
 }
 
-.no-padding-left-sm{
-  @include breakpoint(sm) {
-    padding-left:0!important;
+
+.margin-auto-md{
+  @include breakpoint(md) {
+    margin:0 auto;
   }  
 }
 
 
 //sm
+
+.no-padding-left-sm{
+  @include breakpoint(sm) {
+    padding-left:0!important;
+  }  
+}
 
 
 .text-center-sm{

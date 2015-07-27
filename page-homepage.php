@@ -36,7 +36,7 @@ Template Name: Home
     <div class='row'>
       <div class='col-md-6'>
         <div class='padded'>
-          <img class='img-responsive margin-bottom' src='<?php the_field('homepage_graphic');?>'>
+          <img class='img-responsive margin-bottom margin-auto' src='<?php the_field('homepage_graphic');?>'>
         </div>
       </div>
       <div class='col-md-6'>
@@ -69,7 +69,7 @@ Template Name: Home
     <div class='row'>
       <div class='col-md-6 col-md-push-6'>
         <div class='padded no-padding-bottom'>
-          <img class='img-responsive' src='<?php the_field('testimonial_graphic');?>' style='position:relative; top:-30px;'>
+          <img class='img-responsive margin-auto-md' src='<?php the_field('testimonial_graphic');?>' style='position:relative; top:-30px;'>
         </div>
       </div>
       <div class='col-md-6 col-md-pull-6'>
