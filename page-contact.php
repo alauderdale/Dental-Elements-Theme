@@ -6,6 +6,17 @@ Template Name: Contact
 
 <?php get_header(); ?>
 
+
+<?php
+    if ( function_exists( 'wpcf7_enqueue_scripts' ) ) {
+        wpcf7_enqueue_scripts();
+    }
+ 
+    if ( function_exists( 'wpcf7_enqueue_styles' ) ) {
+        wpcf7_enqueue_styles();
+    }
+?>
+
 <?php while ( have_posts() ) : the_post(); ?>
 
 <div class='map-wrap'>

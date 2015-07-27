@@ -183,7 +183,7 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/custom_post_types.php';
 
 
-
+add_filter( 'wpcf7_load_js', '__return_false' );
 
 
 
