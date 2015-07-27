@@ -1,9 +1,13 @@
 .main-nav{
 	transition-duration:.4s;
+	box-shadow: 0px 1px 0px rgba(0,0,0,.05);
 	background-color:white;
-	box-shadow:none;
 	border:none;
 	padding:$baseline/2 0;
+	position: fixed;
+	width:100%;
+	top:0;
+	z-index: 100;
 	.logo-svg{
 		//to-do:changing menu
 	}

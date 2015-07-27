@@ -1,5 +1,7 @@
 .wiki-content{
-	ul{
+	ul,ol{
+		margin-left: 24px;
+		margin-bottom: 36px;
 		li{
 			font-size: .8em;
 			color: $dark-gray-color;

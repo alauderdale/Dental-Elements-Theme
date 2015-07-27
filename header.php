@@ -37,11 +37,14 @@
     .sliding-menu{
       top:32px!important;
     }
+    .main-nav{
+    	top:32px!important;
+    }
     html{
       margin-top:0!important;
     }
     body{
-      padding-top: 32px;
+      padding-top: 112px;
     }
     #wpadminbar{
       position: fixed;
@@ -59,13 +62,12 @@
 	  <a class='btn btn-default hidden-md hidden-lg' href='<?php echo get_page_link(25); ?>'>
 	    Make an Appointment
 	  </a>
-	  <ul class='nav main-links'>
-	    <li>
-	      <a href='<?php bloginfo('url')?>'>
-	        Home
-	      </a>
-	    </li>
-	  </ul>
+	  <?php wp_nav_menu( array( 
+			'theme_location' => 'primary-home', 
+			'container' => false, 
+			'menu_class' => 'nav main-links',
+			'items_wrap'  => '<ul id="%1$s" class="%2$s">  %3$s</ul>' 
+		)); ?>
 	  <?php wp_nav_menu( array( 
 			'theme_location' => 'primary-company', 
 			'container' => false, 
