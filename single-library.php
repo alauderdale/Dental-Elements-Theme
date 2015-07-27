@@ -5,14 +5,15 @@
     <div class='row'>
       <div class='col-md-12'>
         <h1>
-          Services
+          Patient Library
         </h1>
       </div>
     </div>
   </div>
 </section>
 
-<?php $posttype = 'services' ?>
+
+<?php $posttype = 'library' ?>
 
 <?php  set_query_var( 'posttype', $posttype );
         get_template_part( 'content', 'wiki_page' ); 
