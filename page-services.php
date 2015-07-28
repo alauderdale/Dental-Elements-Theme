@@ -7,7 +7,15 @@ Template Name: Services
 
 <?php get_header(); ?>
 
-<?php get_template_part( 'content', 'page_header' ); ?>
+<!-- page header -->
+
+<?php $pageTitle = 'our services'?>
+
+<?php  set_query_var( 'pageTitle' , $pageTitle );
+        get_template_part( 'content', 'page_header' ); 
+?>
+
+<!-- end page header -->
 
 <?php while ( have_posts() ) : the_post(); ?>
 

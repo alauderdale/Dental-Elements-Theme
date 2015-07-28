@@ -7,17 +7,21 @@
 
 get_header(); ?>
 
-<section class='invert-section hero bg-cover' style='background-image:url(<?php bloginfo('template_url'); ?>/images/blog_banner.png);'>
-  <div class='container'>
-    <div class='row'>
-      <div class='col-md-12'>
-        <h1>
-          blog
-        </h1>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- permalink encoding -->
+
+ <?php
+ob_start();
+the_permalink();
+$permalink = ob_get_clean();
+?>
+
+<!-- end -->
+
+<?php $pageTitle = 'Blog' ?>
+
+<?php  set_query_var( 'pageTitle' , $pageTitle );
+        get_template_part( 'content', 'page_header' ); 
+?>
 
 <section class='blog blog-single'>
   <div class='container'>
@@ -36,13 +40,13 @@ get_header(); ?>
         <div class='social-btn-group'>
           <div class='fix-social affix' data-offset-bottom='600' data-offset-top='210' data-spy='affix'>
             <div aria-label='...' class='btn-group btn-group-vertical' role='group'>
-              <a class='btn btn-default' href='#'>
+              <a class='btn btn-default'  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=<?php echo (urlencode($permalink)); ?>', 'newwindow', 'width=500, height=250');  return false;"   href='#'>
                 F
               </a>
-              <a class='btn btn-default' href='#'>
+              <a class='btn btn-default' target="_blank"  onclick="window.open('http://twitter.com/share?url=<?php echo (urlencode($permalink)); ?>&text=<?php the_title()?>', 'newwindow', 'width=300, height=250');  return false;" href='#'>
                 L
               </a>
-            </div>
+            </div>    
           </div>
         </div>
       </div>

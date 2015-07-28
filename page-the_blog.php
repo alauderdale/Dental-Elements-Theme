@@ -7,17 +7,16 @@ Template Name: Blog
 
 <?php get_header(); ?>
 
-<section class='invert-section hero bg-cover' style='background-image:url(<?php bloginfo('template_url'); ?>/images/blog_banner.png);'>
-  <div class='container'>
-    <div class='row'>
-      <div class='col-md-12'>
-        <h1>
-          blog
-        </h1>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- page header -->
+
+<?php $pageTitle = 'Blog' ?>
+
+<?php  set_query_var( 'pageTitle' , $pageTitle );
+        get_template_part( 'content', 'page_header' ); 
+?>
+
+<!-- end page header -->
+
 <section class='blog blog-index'>
   <div class='container'>
     <div class='row'>

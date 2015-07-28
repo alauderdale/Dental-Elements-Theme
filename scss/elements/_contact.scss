@@ -47,7 +47,8 @@ div.wpcf7-validation-errors{
 	@extend .alert;
 	@extend .alert-warning;
 	font-size: 0.8em;
-	width: 97%;
+	margin: 0 0 10px 0;
+	width: 100%;
 }
 
 div.wpcf7-mail-sent-ok{
@@ -55,5 +56,6 @@ div.wpcf7-mail-sent-ok{
 	@extend .alert;
 	@extend .alert-success;
 	font-size: 0.8em;
-	width: 97%;
+	margin: 0 0 10px 0;
+	width: 100%;
 }

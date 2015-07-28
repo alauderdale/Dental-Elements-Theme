@@ -7,7 +7,12 @@ Template Name: Library
 
 <?php get_header(); ?>
 
+<!-- page header -->
+
 <?php get_template_part( 'content', 'page_header' ); ?>
+
+<!-- end page header -->
+
 
 <?php while ( have_posts() ) : the_post(); ?>
 

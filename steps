@@ -1,5 +1,7 @@
 Backend changes required:
 
+NOTE: set up all custom post types before importing custom fields
+
 - create primary menus - company & patients
 
 - add:
@@ -32,3 +34,7 @@ add contact form 7 plugin
 update smile gallery page
 
 add smile galllery taxenomies
+
+-
+
+set up banner image custom post type and fields
