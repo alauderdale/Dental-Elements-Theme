@@ -7,7 +7,7 @@
       <h2 class='quarter-margin-bottom'>
         <?php the_title();?>
       </h2>
-      <h6 class='bold-font-name'>
+      <h6 class='medium-font-name'>
         <a href='mailto:<?php the_field('employee_email');?>'>
           <?php the_field('employee_email');?>
         </a>

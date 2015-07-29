@@ -3,7 +3,9 @@
     <div class='col-lg-3 col-md-2 col-sm-0'></div>
     <div class='col-lg-4 col-md-5 col-sm-7'>
       <h3 class='quarter-margin-bottom'>
-        We are ready to make you smile.
+        We are ready 
+        <br/>
+        to make you smile.
       </h3>
     </div>
     <div class='col-lg-2 col-sm-1'></div>
