@@ -21,8 +21,8 @@
           <div class='row'>
             <div class='col-sm-7'>
             <?php $DentistsLoop = new WP_Query( array( 'post_type' => 'about','category_name' => 'Dentists') ); ?>
-
 							<?php while ( $DentistsLoop->have_posts() ) : $DentistsLoop->the_post(); ?>
+              <img class='visible-xs img-circle margin-bottom' src='<?php the_field("mobile_image");?>' width='220px'>
               <h4 class='quarter-margin-bottom'>
                 <?php the_title();?>
               </h4>

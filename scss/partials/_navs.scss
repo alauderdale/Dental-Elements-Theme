@@ -1,9 +1,10 @@
 .nav-overview{
+	margin-bottom:$baseline;
 	ul{
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		margin-top:$baseline/2;
+
 		li{
 			a{
 				float: left;
@@ -35,13 +36,11 @@
 
 .nav-secondary{
 	width:auto;
+	background-color:#fafafa;
+	width:auto;
+	padding:0 $baseline/2;
+	border-bottom: 1px solid $border-color;
   @include breakpoint(md) {
-  	background-color:#fafafa;
-    .container{
-    	width:auto;
-    	padding:0 $baseline/2;
-    	border-bottom: 1px solid $border-color;
-    }
     ul{
     	width:auto;
     	overflow-x:scroll;
@@ -49,7 +48,7 @@
     }
   }
 	ul{
-		padding:$baseline 0;
+		padding:$baseline/2 0;
 		list-style:none;
 		margin:0;
 		li{
@@ -62,12 +61,13 @@
 			font-family:$medium-font-name;
 			&.active{
 				a{
+					color: $primary-color;
 					border-bottom:$primary-color 1px solid;
 				}
 			}
 			a{
 				color:$light-gray-color;
-				padding:$baseline/2 0;
+				padding:18px 0;
 				&:hover{
 					color:$primary-color;
 				}
@@ -311,6 +311,9 @@ ul.pager{
 	a{
 		@extend .btn-primary;
 		@extend .btn;
+		&:hover{
+			color:$primary-color;
+		}
 	}
 }
 

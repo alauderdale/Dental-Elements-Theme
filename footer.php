@@ -56,14 +56,25 @@
 														$socialenabled = get_post_meta($post->ID, 'Social Network Enabled', true);
 														$menuclass = get_post_meta($post->ID, 'Menu class', true);
 														if($post->post_title == 'Blog Feed') $target = '_self';
-														if ($socialenabled == "Enabled"){
-														echo '<li><a target="'.$target.'" href="' . $sociallink . '"><i class="fa ' . $menuclass . ' "></i></a></li>';
+														if ($socialenabled == "Enabled"){ ?>
+
+
+                            <li>
+                              <a style="color:<?php the_field("icon_color") ?> ; " target="_blank" href="<?php echo $sociallink ?>">
+                                <i class="fa <?php echo $menuclass ?> ">
+                                </i>
+                              </a>
+                            </li>
+
+                            <?php
 														}
-													endwhile;
-													
-													// Reset Post Data
-													wp_reset_postdata();
-												?>
+                            ?>
+
+
+													<?php endwhile; 
+  													// Reset Post Data
+  													wp_reset_postdata();
+												  ?>
 											</ul>
 										</li>
 	                </ul>
