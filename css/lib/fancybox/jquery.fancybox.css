@@ -97,6 +97,10 @@
 	background: url('fancybox_loading.gif') center center no-repeat;
 }
 
+.fancybox-close{
+	background-position-y:0px;
+}
+
 .fancybox-close {
 	position: absolute;
   top: 10px;
