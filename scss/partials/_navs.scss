@@ -176,16 +176,17 @@ ul.nav-pills{
 		}
 		.panel-body{
 			&.therman{
-				background-image:url(../images/therman.png);
+/*				background-image:url(../images/therman.png);*/
 			  background-repeat: no-repeat;
 			  background-attatchment:scroll; 
 			  background-position-x:right;
-			  background-position-y:top;
+			  background-position-y:bottom;
 				  @include breakpoint(md) {
-				    background-image:url(../images/therman_light.png);
+				   /* background-image:url(../images/therman_light.png);*/
+				   background-position-x:right;
 				  }
 				 	@include breakpoint(sm) {
-				    background-image:none;
+				    background-image:none!important;
 				  }
 			}
 		}

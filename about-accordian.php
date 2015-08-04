@@ -16,12 +16,12 @@
     </div>
     <div class='clearfix'></div>
     <div class='panel-collapse collapse' id='collapse-d' role='tabpanel'>
-      <div class='panel-body therman'>
+            <?php $DentistsLoop = new WP_Query( array( 'post_type' => 'about','category_name' => 'Dentists') ); ?>
+              <?php while ( $DentistsLoop->have_posts() ) : $DentistsLoop->the_post(); ?>
+      <div class='panel-body therman' style="background-image:url(<?php the_field("employee_image");?>);">
         <div class='container'>
           <div class='row'>
-            <div class='col-sm-7'>
-            <?php $DentistsLoop = new WP_Query( array( 'post_type' => 'about','category_name' => 'Dentists') ); ?>
-							<?php while ( $DentistsLoop->have_posts() ) : $DentistsLoop->the_post(); ?>
+            <div class='col-sm-6'>
               <img class='visible-xs img-circle margin-bottom' src='<?php the_field("mobile_image");?>' width='220px'>
               <h4 class='quarter-margin-bottom'>
                 <?php the_title();?>
@@ -56,7 +56,7 @@
               </div>
               <?php endwhile; // end of the loop. ?>
             </div>
-            <div class='col-sm-5'></div>
+            <div class='col-sm-6'></div>
           </div>
         </div>
       </div>

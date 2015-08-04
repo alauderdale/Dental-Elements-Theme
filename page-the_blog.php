@@ -28,7 +28,7 @@ Template Name: Blog
 				?>
 	        <div class='post-thumb'>
 	          <div class='row padding-top'>
-	            <div class='col-md-8'>
+	            <div class='col-sm-8'>
 	              <h4>
 	                <a href='<?php the_permalink(); ?>'>
 	                  <?php the_title(); ?>
@@ -37,15 +37,7 @@ Template Name: Blog
 	              <h6 class='extra-light-text-color'>
 	                posted on <?php the_date(); ?>
 	              </h6>
-	              <p class='lead'>
-	                <?php the_excerpt();?>
-	              </p>
-	              <a class='btn btn-primary margin-bottom' href='<?php the_permalink(); ?>'>
-	                READ MORE
-	              </a>
-	            </div>
-	            <div class='col-md-1'></div>
-	            <div class='col-md-3'>
+	            <div class='visible-xs'>
 	              <a href='blog/single'>
 								<?php if (has_post_thumbnail( $post->ID ) ): ?>
 									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
@@ -53,7 +45,28 @@ Template Name: Blog
 										<img 
 										class='img-responsive margin-bottom margin-top' 
 										src='<?php echo $image[0]; ?>' 
-										width='169'>
+									>
+									</a>
+								<?php endif; ?>
+	              </a>
+	            </div>
+	              <p class='lead'>
+	                <?php the_excerpt();?>
+	              </p>
+	              <a class='btn btn-primary margin-bottom' href='<?php the_permalink(); ?>'>
+	                READ MORE
+	              </a>
+	            </div>
+	            <div class='col-sm-1'></div>
+	            <div class='col-sm-3 hidden-xs'>
+	              <a href='blog/single'>
+								<?php if (has_post_thumbnail( $post->ID ) ): ?>
+									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+									<a href='<?php the_permalink();?>'>
+										<img 
+										class='img-responsive margin-bottom margin-top' 
+										src='<?php echo $image[0]; ?>' 
+									>
 									</a>
 								<?php endif; ?>
 	              </a>

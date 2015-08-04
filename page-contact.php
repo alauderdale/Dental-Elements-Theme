@@ -23,10 +23,12 @@ Template Name: Contact
   <section class='padding-top padding-bottom contact-map-container'>
     <div class='container'>
       <div class='row'>
-        <div class='col-md-12'>
-          <div class='card' style='width:300px;'>
+        <div class='col-md-4 col-sm-6'>
+          <div class='card' style="max-width:380px;">
             <?php the_field('info_card');?>
           </div>
+        </div>
+        <div class='col-md-4 col-sm-6'>
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ Template Name: Testimonials
           <div class='grid-sizer'></div>
           <div class='gutter-sizer'></div>
 
-					<?php $testimonialLoop = new WP_Query( array('post_type' => 'testimonials', 'posts_per_page' => -1,  order=>'DESC') ); ?>
+					<?php $testimonialLoop = new WP_Query( array('post_type' => 'testimonials', 'posts_per_page' => -1,  'orderby'=>'rand') ); ?>
 
 						<?php while ( $testimonialLoop->have_posts() ) : $testimonialLoop->the_post(); 
 
