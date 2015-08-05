@@ -72,9 +72,9 @@
       <div class='col-sm-9 border-left'>
         <div class='padding-left no-padding-left-sm wiki-content'>
           <?php while ( have_posts() ) : the_post(); ?>
-            <h5 class='heading-bordered heading-bordered-left'>
+            <h2 class='heading-bordered heading-bordered-left'>
               <?php the_title();?>
-            </h5>
+            </h2>
             <?php the_content();?>
           <?php endwhile; // end of the loop. ?>
         </div>

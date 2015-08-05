@@ -1,5 +1,15 @@
 <?php get_header(); ?>
 
+<style type="text/css">
+	
+li#menu-item-3759 a{
+	color:#85C342;
+	border-left:3px solid #85C342;
+}
+
+</style>
+
+
 <!-- page header -->
 
 <?php $pageTitle = 'Our Services' ?>

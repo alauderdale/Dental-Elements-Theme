@@ -74,12 +74,20 @@ Template Name: Home
       </div>
       <div class='col-md-6 col-md-pull-6'>
         <div class='margin-top padded no-padding-top'>
+                  <?php $testimonialLoop = new WP_Query( array('post_type' => 'testimonials', 'posts_per_page' => 1,  'orderby'=>'rand') ); ?>
+
+            <?php while ( $testimonialLoop->have_posts() ) : $testimonialLoop->the_post(); 
+
+            $name = (get_post_meta($post->ID, 'Name', true));
+
+          ?>
           <blockquote>
-            <?php the_field('testimonial_text');?>
+            <?php the_content();?>
             <footer>
-              Joan D.
+                <?php echo $name ?>
             </footer>
           </blockquote>
+          <?php endwhile; // end of the loop. ?>
         </div>
       </div>
     </div>

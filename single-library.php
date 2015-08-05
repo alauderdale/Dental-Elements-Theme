@@ -1,5 +1,14 @@
 <?php get_header(); ?>
 
+<style type="text/css">
+	
+li#menu-item-3766 a{
+	color:#85C342;
+	border-left:3px solid #85C342;
+}
+
+</style>
+
 <!-- page header -->
 
 <?php $pageTitle = 'Patient Library' ?>

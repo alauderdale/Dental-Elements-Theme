@@ -28,7 +28,7 @@ Template Name: Blog
 				?>
 	        <div class='post-thumb'>
 	          <div class='row padding-top'>
-	            <div class='col-sm-8'>
+	            <div class='col-md-8 col-sm-6'>
 	              <h4>
 	                <a href='<?php the_permalink(); ?>'>
 	                  <?php the_title(); ?>
@@ -45,6 +45,7 @@ Template Name: Blog
 										<img 
 										class='img-responsive margin-bottom margin-top' 
 										src='<?php echo $image[0]; ?>' 
+										style="max-width:280px;"
 									>
 									</a>
 								<?php endif; ?>
@@ -57,8 +58,8 @@ Template Name: Blog
 	                READ MORE
 	              </a>
 	            </div>
-	            <div class='col-sm-1'></div>
-	            <div class='col-sm-3 hidden-xs'>
+	            <div class='col-md-1 col-sm-1'></div>
+	            <div class='col-md-3 hidden-xs col-sm-5'>
 	              <a href='blog/single'>
 								<?php if (has_post_thumbnail( $post->ID ) ): ?>
 									<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
